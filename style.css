@@ -1,0 +1,140 @@
+/* .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, h2, h3 {
+    line-height: 1;
+}
+
+:root{
+    /* Colors */
+    --clr-primary-400: hsl(158, 36%,37%);
+    --clr-primary-500: hsl(158, 36%,20%);
+    --clr-secondary-200: hsl(30, 38%, 92%);
+
+    --clr-neutral-900: hsl(212, 21%, 14%);
+    --clr-neutral-400: hsl(228, 12%,48%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+
+    /*Font-Family*/
+
+    /* font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif; */
+    
+    --ff-accent: 'Fraunces',serif;
+    --ff-base: 'Montserrat',sans-serif;
+    --fw-reguler: 500;
+    --fw-bold: 700;
+}
+
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-base);
+    font-weight: var(--fw-reguler);
+    font-size: 0.875rem;
+    color: var(--clr-neutral-400);
+    background-color: var(--clr-secondary-200);
+
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+}
+
+/* utilities */
+
+.flexGroup{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.product {
+    --content-padding: 1.5rem;
+    --content-spacing: 1rem;
+
+    display: grid;
+    background-color: var(--clr-neutral-100);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: 600px;
+}
+
+.productContent {
+    display: grid;
+    gap: var(--content-spacing);
+    padding: var(--content-padding);
+}
+
+.productCategory {
+    font-size: 0.8125rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.productTitle{
+    font-size: 2rem;
+    font-family: var(--ff-accent);
+    color: var(--clr-neutral-900);
+}
+
+.productPrice{
+    font-size: 2rem;
+    font-family: var(--ff-accent);
+    color: var(--clr-primary-400);
+
+}
+.productOriginlPrice{
+    text-decoration: line-through;
+}
+
+/* button */
+.btn{
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    
+    padding: .75em 1.5em;
+    border: 0;
+    border-radius: 0.5rem;
+    background-color: var(--clr-primary-400);
+    color: var(--clr-neutral-100);
+    font-weight: var(--fw-bold);
+    font-size: 0.925rem;
+}
+
+.btn:is(:hover, :focus){
+    background-color: var(--clr-primary-500);
+}
+
+.btn[data-icon="shopping-cart"]::before {
+    content: "";
+    background-image: url("images/icon-cart.svg");
+    width: 15px;
+    height: 16px;
+}
+
+
+@media (min-width:600px) {
+   
+    .product{
+        --content-padding: 2rem;
+        margin: 7rem;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
