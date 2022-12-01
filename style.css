@@ -132,7 +132,7 @@ body {
 @media (min-width:600px) {
    
     .product{
-        --content-padding: 2rem;
+        /* --content-padding: 2rem; */
         margin: 7rem;
         grid-template-columns: 1fr 1fr;
     }
