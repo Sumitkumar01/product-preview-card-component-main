@@ -59,7 +59,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
 }
-.sr-only:not(:focus):not(:actiove) {
+.sr-only:not(:focus):not(:active) {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     height: 1px;
